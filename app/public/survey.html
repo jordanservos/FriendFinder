@@ -3,23 +3,31 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Tables Page</title>
+    <title>Survey</title>
 
     <!-- Latest compiled and minified CSS -->
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 
 </head>
 
 <body>
+
+    <nav class="navbar navbar-light bg-light" id="nav">
+        <a class="navbar-brand" href="http://localhost:8080/">
+            <img src="" width="30" height="30" class="d-inline-block align-top fa fa-ravelry" alt="" id="jumbo-title"> Friend Finder
+        </a>
+    </nav>
+
     <div class="container">
         <h2>Fill out the survey below to find your match!</h2>
         <hr />
 
-        <h4>Tell us about yourself:</h4>
+        <h3>Tell us about yourself:</h3>
         <br />
         <h5>What's your name? (required)</h5>
         <input type="text" id="name" class="form-control" required />
@@ -140,7 +148,7 @@
       </select>
 
         <br />
-        <br />
+
 
         <hr />
 
@@ -168,7 +176,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Best Match</h5>
+            <h2 class="modal-title" id="match-title">Best Match</h2>
             <button
               type="button"
               class="close"
@@ -180,7 +188,7 @@
           </div>
           <div class="modal-body">
             <h3 id="best-name"></h3>
-            <img id="best-pic" src="" alt="" />
+            <img id="best-pic" src="" alt=""  />
             ...
           </div>
           <div class="modal-footer">
@@ -238,6 +246,7 @@
           };
 
           $.post("/api/friends", newFriend, function(data) {
+
             $("#best-name").text(data.name);
             $("#best-pic").attr("src", data.photo);
 

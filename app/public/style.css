@@ -1,0 +1,43 @@
+.navbar {
+    margin-bottom: 25px;
+    box-shadow: gray 2px 2px;
+    background-color: lightgrey !important;
+}
+
+.chosen-select {
+    margin-bottom: 25px;
+    box-shadow: gray 2px 2px;
+}
+
+#submit {
+    background-color: #ec184d;
+    border: none;
+    box-shadow: 4px 4px;
+}
+
+.btn {
+    background-color: #ec184d;
+    border: none;
+    box-shadow: 4px 4px;
+}
+
+.form-control {
+    box-shadow: 2px 2px;
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+#match-title {
+    color: #ec184d;
+    text-shadow: black 2px;
+}
+
+#jumbo-title {
+    color: #ec184d;
+    text-shadow: black 2px;
+}
