@@ -31,5 +31,5 @@ Express is used to handle routing and it's fully deployed on Heroku! - https://f
     
 
 
-![Next](https://github.com/jordanservos/Bamazon/blob/master/pics/Screen%20Shot%202020-03-04%20at%204.17.42%20PM.png)
+
 
