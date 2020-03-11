@@ -20,10 +20,12 @@ module.exports = function(app) {
     // ---------------------------------------------------------------------------
 
     app.get("/api/friends", function(req, res) {
-        // console.log("This is working");
+
         res.json(friendsInfo);
+        console.log("This is working " + friendsInfo[0].name);
 
     });
+
 
 
 
@@ -51,15 +53,17 @@ module.exports = function(app) {
         for (var i = 0; i < friendsInfo.length; i++) {
             totalDiff = 0;
 
-            for (var j = 0; j < friendsInfo[i].score; j++) {
-                console.log("This is working" + friendsInfo[i].score);
+            for (var j = 0; j < friendsInfo[i].scores[j]; j++) {
+                console.log("This is working" + friendsInfo[i].scores[j]);
 
 
                 totalDiff += Math.abs(parseInt(req.body.scores[j]) - parseInt(friendsInfo[i].scores[j]));
 
+                console.log(totalDiff);
+
                 if (totalDiff <= friendMatch.scoreDifference) {
                     friendMatch.name = friendsInfo[i].name;
-                    friendsMatch.photo = friendsInfo[i].photo;
+                    friendMatch.photo = friendsInfo[i].photo;
                     friendMatch.scoreDifference = totalDiff;
                 }
 
@@ -71,7 +75,7 @@ module.exports = function(app) {
 
         friendsInfo.push(req.body);
         res.json(friendMatch);
-        console.log("Your best match is " + friendMatch)
+        console.log("Your best match is " + friendMatch.name)
 
 
 
