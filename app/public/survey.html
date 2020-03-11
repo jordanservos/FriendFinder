@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tables Page</title>
+
+    <!-- Latest compiled and minified CSS -->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Fill out the survey below to find your match!</h2>
+        <hr />
+
+        <h4>Tell us about yourself:</h4>
+        <br />
+        <h5>What's your name? (required)</h5>
+        <input type="text" id="name" class="form-control" required />
+
+        <h5>Add a profile picture link (required)</h5>
+        <input type="text" id="pic" class="form-control" required />
+
+        <hr />
+
+        <h4><strong>Question #1</strong></h4>
+        <h5>Netflix and Chill over Bar and Drinks</h5>
+        <select class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #2</strong></h4>
+        <h5>I enjoy staying active</h5>
+        <select class="chosen-select" id="q2">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #3</strong></h4>
+        <h5>Smoking is gross</h5>
+        <select class="chosen-select" id="q3">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #4</strong></h4>
+        <h5>Beach and Sun over Ski and Slopes</h5>
+        <select class="chosen-select" id="q4">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #5</strong></h4>
+        <h5>I'd rather stay up late than wake up early</h5>
+        <select class="chosen-select" id="q5">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #6</strong></h4>
+        <h5>Breakfast over Dinner</h5>
+        <select class="chosen-select" id="q6">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #7</strong></h4>
+        <h5>Lucky Charms is the only cereal</h5>
+        <select class="chosen-select" id="q7">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #8</strong></h4>
+        <h5>I'd rather staycation versus vacation</h5>
+        <select class="chosen-select" id="q8">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #9</strong></h4>
+        <h5>Robocop is one of the worst movies ever</h5>
+        <select class="chosen-select" id="q9">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <h4><strong>Question #10</strong></h4>
+        <h5>Video games suck</h5>
+        <select class="chosen-select" id="q10">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+        <br />
+        <br />
+
+        <hr />
+
+        <br />
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+        <i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+      </button>
+
+        <br />
+
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/friends">API Friends List</a> |
+                    <a href="https://github.com/jordanservos/FriendFinder">GitHub Repo</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="match-modal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Best Match</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3 id="best-name"></h3>
+            <img id="best-pic" src="" alt="" />
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $("#submit").on("click", function(event) {
+        event.preventDefault();
+
+        function formFilled() {
+          var isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          $(".chosen-select").each(function() {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+
+        if (formFilled()) {
+          var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#pic").val().trim(),
+            scores: [
+              $("#q1").val().trim(),
+              $("#q2").val().trim(),
+              $("#q3").val().trim(),
+              $("#q4").val().trim(),
+              $("#q5").val().trim(),
+              $("#q6").val().trim(),
+              $("#q7").val().trim(),
+              $("#q8").val().trim(),
+              $("#q9").val().trim(),
+              $("#q10").val().trim()
+            ]
+          };
+
+          $.post("/api/friends", newFriend, function(data) {
+            $("#best-name").text(data.name);
+            $("#best-pic").attr("src", data.photo);
+
+            $("#match-modal").modal("toggle");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
